@@ -1,0 +1,12 @@
+version: '3'
+services:
+  www:
+    image:
+      node:12-alpine
+    volumes:
+      - .:/opt/app/
+    ports:
+      - '5000:80'
+    build:
+      context: .
+    restart: always
