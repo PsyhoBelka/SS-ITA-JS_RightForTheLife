@@ -17,6 +17,8 @@ right-for-life_front/.env.local
 right-for-life_front/.env.development.local
 right-for-life_front/.env.test.local
 right-for-life_front/.env.production.local
+right-for-life_front/dist
+right-for-life_front/lib
 
 right-for-life_front/npm-debug.log*
 right-for-life_front/yarn-debug.log*
