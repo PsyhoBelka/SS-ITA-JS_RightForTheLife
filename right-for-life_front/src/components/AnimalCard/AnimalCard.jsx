@@ -24,4 +24,4 @@ export const AnimalCard = (props) => {
       </div>
     </li >
   );
-}
+};

@@ -1,0 +1,7 @@
+.animal-details-card__btn {
+  transition: background-color .2s;
+}
+
+.animal-details-card__pet-img {
+  max-height: 500px;
+}

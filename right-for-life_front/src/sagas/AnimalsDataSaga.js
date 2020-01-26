@@ -3,7 +3,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 
 function* fetchAnimalsData() {
-  const json = yield fetch('https://alex-boklag.github.io/SSA-Demo-AnimalShelter/db/animals.json')
+  const json = yield fetch('/api/animals')
     .then(response => response.json(),);
   yield put({type: ANIMALS_DATA_RECEIVED, json: json,});
 }

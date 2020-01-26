@@ -1,4 +1,5 @@
 import React from "react";
+import { LoadIndicator } from '../components/LoadIndicator'
 
 
 export const preloader = ({MainComponent, LoadingComponent, checkLoadingFunc, loadDataAction,}) => {
@@ -7,7 +8,7 @@ export const preloader = ({MainComponent, LoadingComponent, checkLoadingFunc, lo
       return <MainComponent {...props} />
     } else {
       dispatch(loadDataAction());
-      return <LoadingComponent {...props} />
+      return <LoadIndicator />
     }
   };
 };
