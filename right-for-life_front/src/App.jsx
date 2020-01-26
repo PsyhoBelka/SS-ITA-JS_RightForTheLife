@@ -9,6 +9,8 @@ import { HappyStoriesPage } from "./containers/HappyStoriesPage";
 import { EmergencyHelpPage } from "./containers/EmergencyHelpPage"
 import { ErrorIndicator } from "./components/ErrorIndicator";
 import { AboutPage } from './containers/AboutPage';
+import AnimalDetailsPage from "./containers/AnimalDetailsPage";
+
 
 function App({ store }) {
 	return (
@@ -23,7 +25,8 @@ function App({ store }) {
 					<Route exact path="/help" /*component={HelpPage}*/ />
 					<Route exact path='/about' component={AboutPage} />
 					<Route exact path="/emergency" component={EmergencyHelpPage} />
-					<Route render={() => 
+					<Route exact path="/pet" component={AnimalDetailsPage} />
+					<Route render={() =>
 						<ErrorIndicator 
 							message="Страница не найдена :("
 							renderAction={() => <Link to="/">Вернуться на главную</Link>}

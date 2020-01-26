@@ -1,0 +1,13 @@
+import { GET_ANIMALS_DATA, GET_NEWS, } from '../constants'
+
+export function getAnimalsData() {
+  return {
+    type: GET_ANIMALS_DATA,
+  }
+}
+
+export function getNews() {
+  return {
+    type: GET_NEWS,
+  }
+}
