@@ -11,8 +11,8 @@ class Card extends React.Component {
       <li className="animal-details-card w-1/2 flex flex-col">
         <div className="z-0 pointer">
           <div className="rounded-xl shadow-md overflow-hidden">
-            <img className="animal-details-card__pet-img cursor-pointer w-full h-full object-cover object-center"
-                 onClick={this.handleImgClick} src={photos[0]} alt="Фото питомца"/>
+            <img className="animal-details-card__pet-img cursor-pointer w-full h-full object-cover object-center" onClick={this.handleImgClick} src={photos[0]} alt="Фото питомца"/>
+
           </div>
         </div>
         <div className="w-11/12 p-4 bg-white text-gray-700 uppercase shadow-xl rounded-b-xl self-center">
@@ -50,11 +50,11 @@ class Card extends React.Component {
 
 
   handleImgClick = () => {
-    alert('open big image')
+
   };
 
   handlePickUpPetClick = () => {
-    alert('open page/modal забрать питомца')
+
   };
 }
 
