@@ -6,6 +6,5 @@ import emergencyData from './EmergencyDataReducer.js'
 
 export default combineReducers({
   animalsData,
-  news,
   emergencyData,
 })

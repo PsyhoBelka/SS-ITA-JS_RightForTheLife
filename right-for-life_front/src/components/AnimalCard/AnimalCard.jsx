@@ -16,7 +16,7 @@ export const AnimalCard = (props) => {
         <button className="w-5/12 bg-green-300 hover:bg-green-400 text-green-700 font-bold py-2 px-2 rounded-xl mt-2 mb-4" style={{ outline: 'none'}}>
           Приютить
         </button>
-        <Link to={"/pet?id=" + id}>
+        <Link to={"/animals/" + id}>
         <button className="w-5/12 bg-orange-300 hover:bg-orange-400 text-orange-700 font-bold py-2 px-2 rounded-xl mt-2 mb-4 ml-2" style={{ outline: 'none'}}>
           История
         </button>

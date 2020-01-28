@@ -25,13 +25,14 @@ function App({store}) {
           <Switch>
             <Route exact path="/" component={HomePage}/>
             <Route exact path="/animals" component={AnimalsPage}/>
-            <Route exact path="/animals:id" component={AnimalDetailsPage}/>
+            <Route exact path="/animals/:id" component={AnimalDetailsPage}/>
             <Route exact path="/news" component={NewsListPage}/>
             <Route exact path="/news/:id" component={NewsPage}/>
             <Route exact path="/stories" component={HappyStoriesPage}/>
             <Route exact path="/help" component={DonatePage}/>
             <Route exact path="/about" component={AboutPage}/>
             <Route exact path="/emergency" component={EmergencyHelpPage}/>
+            <Route exact path="/emergency/:id" component={AnimalDetailsPage}/>
             <Route component={NotFoundPage}/>
           </Switch>
         </SiteContentContainer>

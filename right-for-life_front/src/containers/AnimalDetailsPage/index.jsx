@@ -4,7 +4,7 @@ import { getAnimalsData, getEmergencyData } from "../../actions";
 import { AnimalDetails } from "./AnimalDetails.jsx";
 import preloader from "../../decorators/preloader.jsx";
 import queryString from "query-string"
-import NotFoundPage from "../NotFoundPage";
+import { NotFoundPage } from "../NotFoundPage";
 import CSSTransition from 'react-addons-css-transition-group';
 import './style.css'
 import PreloadImg from "../../decorators/PreloadImg.jsx";
@@ -23,8 +23,8 @@ class AnimalDetailsWithPetObj extends React.Component {
   render() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 
-    const petId = +queryString.parse(this.props.location.search).id;
-    const petObj = this.props.animalsArr.find(animal => animal.id === petId);
+    const petId = this.props.match.params.id;
+    const petObj = this.props.animalsArr.find(animal => String(animal.id) === petId);
 
     return petObj ?
       <PreloadImg imgSrc={petObj.photos[0]} OriginalComponent={(<CSSTransition
@@ -38,10 +38,10 @@ class AnimalDetailsWithPetObj extends React.Component {
   }
 }
 
-export default connect((state, props) => ({
+export const AnimalDetailsPage = connect((state, props) => ({
   animalsArr: props.emergency ? state.emergencyData.arr : state.animalsData.arr,
 }))(preloader({
   MainComponent: AnimalDetailsWithPetObj,
   checkLoadingFunc: props => Array.isArray(props.animalsArr),
   loadDataAction: props => props.emergency ? getEmergencyData : getAnimalsData,
-}))
+}));
