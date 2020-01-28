@@ -8,9 +8,9 @@ class Card extends React.Component {
     const {name, age, photos, gender, breed} = this.props;
 
     return (
-      <li className="animal-details-card w-1/2 flex flex-col">
+      <li className="animal-details-card w-full flex flex-col">
         <div className="z-0 pointer">
-          <div className="rounded-xl shadow-md overflow-hidden">
+          <div className="rounded-b-xl sm:rounded-t-xl  shadow-md overflow-hidden">
             <img className="animal-details-card__pet-img cursor-pointer w-full h-full object-cover object-center" onClick={this.handleImgClick} src={photos[0]} alt="Фото питомца"/>
 
           </div>

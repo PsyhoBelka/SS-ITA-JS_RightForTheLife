@@ -1,6 +1,6 @@
 import React from "react";
 import Card from './Card';
-import {BackBtn, ShareBtn} from '../../components/FloatingBtn'
+import { BackBtn, ShareBtn } from '../../components/FloatingBtn'
 import './style.css'
 
 export class AnimalDetails extends React.Component {
@@ -9,16 +9,19 @@ export class AnimalDetails extends React.Component {
 
     return (
       <div className="relative">
-        <BackBtn />
-        <ShareBtn position="right-0"/>
-
-        <div className="flex mx-auto px-4" style={{maxWidth: '800px'}}>
-        <Card {...this.props} />
-
-        <div className="w-1/2 my-5 mx-12 font-medium text-gray-700">
-          {description}
+        <div className="absolute mt-6 sm:mt-0 ml-2 sm:ml-0">
+          <BackBtn/>
         </div>
-      </div>
+
+        <div className="flex-none sm:flex mx-auto px-0 sm:px-4" style={{maxWidth: '800px'}}>
+          <div className="w-full sm:w-1/2">
+            <Card {...this.props} />
+          </div>
+
+          <div className="w-full sm:w-1/2 mt-10 sm:mt-5 mb-5 mx-0 sm:mx-12 font-medium text-gray-700 border-8 border-transparent">
+            {description}
+          </div>
+        </div>
       </div>
     )
   }

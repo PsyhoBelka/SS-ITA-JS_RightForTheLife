@@ -14,7 +14,6 @@ import PreloadImg from "../../decorators/PreloadImg.jsx";
 // todo: share button (click on float button shows buttons with social networks
 // todo: забрать and помочь actions
 // todo: images slider
-// todo: responsive design
 
 class AnimalDetailsWithPetObj extends React.Component {
   shouldComponentUpdate(nextProps, nextState, nextContext) {
